@@ -51,7 +51,8 @@ fn part2() {
     let mut left: Vec<i64> = Vec::with_capacity(capacity);
     let mut right: HashMap<i64, i64> = HashMap::with_capacity(capacity);
 
-    // iterate contents line by line collecting into each list
+    // iterate contents line by line collecting the left into a list
+    // and updating the right's frequency in the map
     for line in contents.lines() {
         if let Some((a, b)) = line.split_once("   ") {
             let l = a
@@ -65,7 +66,6 @@ fn part2() {
             *right.entry(r).or_insert(0) += 1;
         }
     }
-    left.sort();
 
     let ans = left.iter().fold(0, |acc, &x| {
         let k = *right.get(&x).unwrap_or(&0);

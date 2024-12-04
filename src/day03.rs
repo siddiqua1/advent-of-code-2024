@@ -75,11 +75,7 @@ impl MulStateMachine {
     }
     pub fn step(self, c: char) -> Self {
         match self {
-            MulStateMachine::None => {
-                if c == 'm' {
-                    return MulStateMachine::M;
-                }
-            }
+            MulStateMachine::None => {}
             MulStateMachine::M => {
                 if c == 'u' {
                     return MulStateMachine::U;

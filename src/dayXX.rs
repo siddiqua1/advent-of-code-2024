@@ -7,7 +7,7 @@ fn main() {
 }
 
 fn part1() {
-    let file = File::open("inputs/day03-p1.txt").unwrap();
+    let file = File::open("inputs/day03.txt").unwrap();
     let reader = BufReader::new(file);
 
     let ans = reader
@@ -19,7 +19,7 @@ fn part1() {
 }
 
 fn part2() {
-    let file = File::open("inputs/day03-p1.txt").unwrap();
+    let file = File::open("inputs/day03.txt").unwrap();
     let reader = BufReader::new(file);
 
     let ans = reader

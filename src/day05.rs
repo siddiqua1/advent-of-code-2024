@@ -94,13 +94,11 @@ fn part2() {
 #[derive(Default)]
 struct TwoWayOrdering {
     less: HashMap<u32, HashSet<u32>>,
-    more: HashMap<u32, HashSet<u32>>,
 }
 
 impl TwoWayOrdering {
     pub fn add_pair(&mut self, a: u32, b: u32) {
         self.less.entry(a).or_default().insert(b);
-        self.more.entry(b).or_default().insert(a);
     }
 
     pub fn ordering_wrong(&self, a: u32, seen: &HashSet<u32>) -> bool {
@@ -116,8 +114,8 @@ impl TwoWayOrdering {
                 return Ordering::Less;
             }
         }
-        if let Some(more) = self.more.get(a) {
-            if more.contains(b) {
+        if let Some(more) = self.less.get(b) {
+            if more.contains(a) {
                 return Ordering::Greater;
             }
         }

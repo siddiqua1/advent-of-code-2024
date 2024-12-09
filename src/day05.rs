@@ -1,7 +1,6 @@
 use std::cmp::Ordering;
 use std::collections::HashMap;
 use std::collections::HashSet;
-use std::collections::VecDeque;
 use std::fs::File;
 use std::io::{prelude::*, BufReader};
 
@@ -11,7 +10,7 @@ fn main() {
 }
 
 fn part1() {
-    let file = File::open("inputs/day05-p1.txt").unwrap();
+    let file = File::open("inputs/day05.txt").unwrap();
     let reader = BufReader::new(file);
     let lines: Vec<String> = reader.lines().map_while(Result::ok).collect();
 
@@ -50,7 +49,7 @@ fn part1() {
 }
 
 fn part2() {
-    let file = File::open("inputs/day05-p1.txt").unwrap();
+    let file = File::open("inputs/day05.txt").unwrap();
     let reader = BufReader::new(file);
     let lines: Vec<String> = reader.lines().map_while(Result::ok).collect();
 

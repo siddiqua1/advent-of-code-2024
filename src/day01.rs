@@ -8,7 +8,7 @@ fn main() {
 fn part1() {
     // read in the file contents
     let contents =
-        fs::read_to_string("inputs/day01-p1.txt").expect("Should have been able to read the file");
+        fs::read_to_string("inputs/day01.txt").expect("Should have been able to read the file");
 
     // initialize the left and right lists
     // note we can preallocate the size based on the number of lines
@@ -43,7 +43,7 @@ fn part1() {
 fn part2() {
     // read in the file contents (same input)
     let contents =
-        fs::read_to_string("inputs/day01-p1.txt").expect("Should have been able to read the file");
+        fs::read_to_string("inputs/day01.txt").expect("Should have been able to read the file");
 
     // initialize the left list as a vector
     // the right list is a frequency map

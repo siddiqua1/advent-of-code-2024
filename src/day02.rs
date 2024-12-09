@@ -7,7 +7,7 @@ fn main() {
 }
 
 fn part1() {
-    let file = File::open("inputs/day02-p1.txt").unwrap();
+    let file = File::open("inputs/day02.txt").unwrap();
     let reader = BufReader::new(file);
 
     let ans = reader
@@ -35,7 +35,7 @@ fn level_safety(level: &[i64]) -> i64 {
 }
 
 fn part2() {
-    let file = File::open("inputs/day02-p1.txt").unwrap();
+    let file = File::open("inputs/day02.txt").unwrap();
     let reader = BufReader::new(file);
 
     let ans = reader

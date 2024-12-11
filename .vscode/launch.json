@@ -333,6 +333,80 @@
       },
       "args": [],
       "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'day10'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=day10",
+          "--package=advent-of-code-2024"
+        ],
+        "filter": {
+          "name": "day10",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'day10'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=day10",
+          "--package=advent-of-code-2024"
+        ],
+        "filter": {
+          "name": "day10",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'day11'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=day11",
+          "--package=advent-of-code-2024"
+        ],
+        "filter": {
+          "name": "day11",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'day11'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=day11",
+          "--package=advent-of-code-2024"
+        ],
+        "filter": {
+          "name": "day11",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
     }
   ]
 }
